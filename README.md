@@ -24,17 +24,19 @@ The first MapReduce job calculates the total sales for each city based on the sa
    ```docker cp TP3_MapReduce-1.0-SNAPSHOT.jar 95a26e1:/opt/hadoop```
 4. Enter the Namenode container:
  ```docker exec -it 72e44bd23 bash```
-5. Visualize the file `ventes.txt `
-   
+5. Visualize the file `ventes.txt ` with ``` cat /opt/hadoop/ventes.txt```
+   ![1](https://github.com/khawla12-op/TP2MapReduce/assets/108635784/8503b821-256e-461a-aa64-916a7d3c6eb9)
 
+6. Make sure that the jar file and the txt file are in the docker container
+![2](https://github.com/khawla12-op/TP2MapReduce/assets/108635784/d8971e21-ec52-4ca1-a231-3a885d8145df)
+7. Copy the file "ventes.txt" from your Docker container's local file system to HDFS using the following command: ```hdfs dfs -put /opt/hadoop/ventes.txt /```
+8. Now that you have confirmed that the "ventes.txt" file is present in HDFS, you can execute your MapReduce job using the "ventes.txt" file as input. Here's how you can do it:
 
-
-
-
-
-
-
-hadoop jar <path_to_jar_file> hadoop.mapreduce.job1.Driver /path/to/ventes.txt /output_ventes
+![3](https://github.com/khawla12-op/TP2MapReduce/assets/108635784/090ad11e-9ab2-4533-9073-8a2d6605fb7f)
+8. See the result of the output file:
+![4](https://github.com/khawla12-op/TP2MapReduce/assets/108635784/d244538d-4134-4255-9e12-30954c69d604)
+]![5](https://github.com/khawla12-op/TP2MapReduce/assets/108635784/9e59223a-2628-464c-901f-57e0464ea40e)
+![6](https://github.com/khawla12-op/TP2MapReduce/assets/108635784/01ce0a27-dd05-4a37-90e4-0dd05b10382e)
 ## Job 2: Total Sales per Product per City for a Given Year
 
 The second MapReduce job calculates the total sales for each product in each city for a specific year.
