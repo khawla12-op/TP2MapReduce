@@ -45,3 +45,4 @@ The second MapReduce job calculates the total sales for each product in each cit
 ventes.txt: Sales data file in the specified format.
 ### Output
 Total sales per product per city for the given year.
+```  hadoop jar TP3_MapReduce-1.0-SNAPSHOT.jar hadoop.mapreduce.job2.Driver /ventes.txt output_per_year 2024```
